@@ -5,6 +5,7 @@ import 'package:green_tech/core/widgets/custom_appbar.dart';
 import 'package:green_tech/core/widgets/custom_drawer.dart';
 import 'package:green_tech/core/utils.dart';
 import 'package:green_tech/core/widgets/responsive_text.dart';
+import 'package:green_tech/features/address_page.dart';
 
 class YourInfoPage extends StatefulWidget {
   @override
@@ -26,8 +27,8 @@ class _YourInfoPageState extends State<YourInfoPage> {
     return SafeArea(
         child: Scaffold(
           backgroundColor: Colors.grey[200],
-            drawer: customAppDrawer(yourAccount, toggleIsExpanded(yourAccount)),
-            appBar: customAppBar(context, hasSpace: false),
+            drawer: customAppDrawer(context,yourAccount, toggleIsExpanded(yourAccount)),
+            appBar: customAppBar(context, hasSpace: false, title:"Your Info"),
             body: LayoutBuilder(
                 builder: (BuildContext context, BoxConstraints constraints) {
               return Container(
@@ -103,7 +104,7 @@ class _YourInfoPageState extends State<YourInfoPage> {
                 FlatButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => YourInfoPage()));
+                        MaterialPageRoute(builder: (_) => AddressPage()));
                   },
                   child: Text("NEXT",
                       style: TextStyle(

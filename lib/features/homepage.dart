@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:green_tech/core/utils.dart';
+import 'package:green_tech/features/alternate_products_page.dart';
 import 'package:green_tech/features/products.dart';
 
 class HomePage extends StatefulWidget {
@@ -247,7 +248,7 @@ class _HomePageState extends State<HomePage>
                 Expanded(
                   child: TabBarView(
                     controller: controller,
-                    children: [TabNew(), TabNew(), TabNew()],
+                    children: [TabNew(), SecondaryProductPage(), TabNew()],
                   ),
                 )
               ],

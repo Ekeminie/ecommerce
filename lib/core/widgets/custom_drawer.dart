@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:green_tech/core/utils.dart';
+import 'package:green_tech/features/profile.dart';
 
-Drawer customAppDrawer(bool yourAccount, VoidCallback function){
+Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback function){
   return Drawer(
     child: ListView(
       padding: EdgeInsets.zero,
@@ -10,6 +11,11 @@ Drawer customAppDrawer(bool yourAccount, VoidCallback function){
           child: ListView(
             children: [
               UserAccountsDrawerHeader(
+
+          onDetailsPressed:(){
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => ProfilePage()));
+          },
                   accountName: Text("Earvin Dain",
                       style: TextStyle(
                           fontSize: 12, color: Colors.white)),
@@ -32,7 +38,8 @@ Drawer customAppDrawer(bool yourAccount, VoidCallback function){
             ExpansionPanel(
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
-                  onTap:function,
+                  onTap:()=>  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => ProfilePage())),
                   title: Text('Account',
                       style: TextStyle(
                           fontSize: 18, color: Colors.grey)),
@@ -68,7 +75,7 @@ Drawer customAppDrawer(bool yourAccount, VoidCallback function){
               ),
               isExpanded: yourAccount,
             ),
-            ExpansionPanel(
+            ExpansionPanel(canTapOnHeader: true,
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   title: Text('New Arrivals',

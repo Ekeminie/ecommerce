@@ -35,7 +35,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
     final mq = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        drawer: customAppDrawer(yourAccount, toggleIsExpanded(yourAccount)),
+        drawer: customAppDrawer(context,yourAccount, toggleIsExpanded(yourAccount)),
         appBar: customAppBar(context, hasSpace: false),
         body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {

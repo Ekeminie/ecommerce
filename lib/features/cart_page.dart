@@ -28,12 +28,12 @@ class _CartPageState extends State<CartPage> {
     final mq = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
-            drawer: customAppDrawer(yourAccount, toggleIsExpanded(yourAccount)),
-            appBar: customAppBar(context, hasSpace: false),
+            drawer: customAppDrawer(context,yourAccount, toggleIsExpanded(yourAccount)),
+            appBar: customAppBar(context, hasSpace: false, title:"Cart"),
             body: LayoutBuilder(
                 builder: (BuildContext context, BoxConstraints constraints) {
               return Container(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(20),
                   child: ListView(
                     children: [
                       singleCartItem(mq),

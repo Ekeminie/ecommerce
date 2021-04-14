@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-AppBar customAppBar(context, {bool hasSpace = true}){
+AppBar customAppBar(context, {bool hasSpace = true,String title}){
   final mq = MediaQuery.of(context).size;
  return  AppBar(
       iconTheme: IconThemeData(color: Colors.white),
-      title: Text("Details", style: TextStyle(color: Colors.white)),
+      title: Text(title??"", style: TextStyle(color: Colors.white)),
       actions: <Widget>[
         IconButton(
           icon: Icon(
