@@ -18,6 +18,11 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Size size = MediaQuery.of(context).size;
+    // print("Screen Sizing Information");
+    // print(size.height);
+    // print(size.width);
+    // ScreenUtil.init(context, designSize: Size(392, 834));
     return SafeArea(
       child: Scaffold(
         drawer: Drawer(

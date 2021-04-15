@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:green_tech/core/utils.dart';
+import 'package:green_tech/features/agreements_page.dart';
 import 'package:green_tech/features/profile.dart';
 
-Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback function){
+Drawer customAppDrawer(
+    BuildContext context, bool yourAccount, VoidCallback function) {
   return Drawer(
     child: ListView(
       padding: EdgeInsets.zero,
@@ -11,17 +13,14 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
           child: ListView(
             children: [
               UserAccountsDrawerHeader(
-
-          onDetailsPressed:(){
-            Navigator.push(context,
-                MaterialPageRoute(builder: (_) => ProfilePage()));
-          },
+                  onDetailsPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProfilePage()));
+                  },
                   accountName: Text("Earvin Dain",
-                      style: TextStyle(
-                          fontSize: 12, color: Colors.white)),
+                      style: TextStyle(fontSize: 12, color: Colors.white)),
                   accountEmail: Text("greentech@gmail.com",
-                      style: TextStyle(
-                          fontSize: 12, color: Colors.white)),
+                      style: TextStyle(fontSize: 12, color: Colors.white)),
                   currentAccountPicture: CircleAvatar(
                     radius: 50.0,
                     backgroundImage: AssetImage("login_bg".jpg),
@@ -38,11 +37,10 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
             ExpansionPanel(
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
-                  onTap:()=>  Navigator.push(context,
+                  onTap: () => Navigator.push(context,
                       MaterialPageRoute(builder: (_) => ProfilePage())),
                   title: Text('Account',
-                      style: TextStyle(
-                          fontSize: 18, color: Colors.grey)),
+                      style: TextStyle(fontSize: 18, color: Colors.grey)),
                 );
               },
               body: Container(
@@ -53,20 +51,20 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Orders',
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.grey[500])),
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.grey[500])),
                     SizedBox(
                       height: 10,
                     ),
                     Text('WishList',
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.grey[500])),
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.grey[500])),
                     SizedBox(
                       height: 10,
                     ),
                     Text('Recommendation',
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.grey[500])),
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.grey[500])),
                     SizedBox(
                       height: 10,
                     ),
@@ -75,12 +73,12 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
               ),
               isExpanded: yourAccount,
             ),
-            ExpansionPanel(canTapOnHeader: true,
+            ExpansionPanel(
+              canTapOnHeader: true,
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   title: Text('New Arrivals',
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.grey)),
+                      style: TextStyle(fontSize: 16, color: Colors.grey)),
                 );
               },
               body: ListTile(
@@ -93,8 +91,7 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   title: Text('Sales',
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.grey)),
+                      style: TextStyle(fontSize: 16, color: Colors.grey)),
                 );
               },
               body: ListTile(
@@ -107,8 +104,7 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   title: Text('Men',
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.grey)),
+                      style: TextStyle(fontSize: 16, color: Colors.grey)),
                 );
               },
               body: ListTile(
@@ -121,8 +117,7 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
                   title: Text('Women',
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.grey)),
+                      style: TextStyle(fontSize: 16, color: Colors.grey)),
                 );
               },
               body: ListTile(
@@ -134,13 +129,24 @@ Drawer customAppDrawer(BuildContext context, bool yourAccount, VoidCallback func
             ExpansionPanel(
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
-                  title: Text('Kids',
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.grey)),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => TermsAndConditionsPage()));
+                  },
+                  title: Text('Agreement Page',
+                      style: TextStyle(fontSize: 16, color: Colors.grey)),
                 );
               },
               body: ListTile(
-                title: Text('Item 2 child'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => TermsAndConditionsPage()));
+                },
+                title: Text('Agreement Page'),
                 subtitle: Text('Details goes here'),
               ),
               isExpanded: false,

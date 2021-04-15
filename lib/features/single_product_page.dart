@@ -190,7 +190,12 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       children: [
                         Expanded(
                           child: FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => CartPage()));
+                            },
                             child: Text("BUY NOW",
                                 style: TextStyle(
                                     fontSize: 15.sp,

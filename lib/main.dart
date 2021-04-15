@@ -23,11 +23,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    print("Screen Sizing Information");
-    print(size.height);
-    print(size.width);
-    ScreenUtil.init(context, designSize: Size(392, 834));
+    // Size size = MediaQuery.of(context).size;
+    // print("Screen Sizing Information");
+    // print(size.height);
+    // print(size.width);
+    // ScreenUtil.init(context, designSize: Size(392, 834));
+    return ScreenUtilInit(
+      designSize: Size(392, 834),
+      allowFontScaling: false,
+      builder: () =>MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Green Tech',
+        theme: ThemeData(
+          primarySwatch: MaterialColor(0xff0AADC2, color),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: LoginPage(title: 'Green Tech'),
+      )
+    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Green Tech',

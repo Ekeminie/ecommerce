@@ -100,9 +100,8 @@ class PaymentScreen extends StatelessWidget {
               child: FlatButton(
                 minWidth: double.infinity,
                 onPressed: () {
-                 // showAlertDialog(context);
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => TermsAndConditionsPage()));
+                  showAlertDialog(context);
+
                 },
                 child: Text("NEXT",
                     style: TextStyle(

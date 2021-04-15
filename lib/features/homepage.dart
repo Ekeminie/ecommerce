@@ -271,6 +271,11 @@ class TabNew extends StatelessWidget {
           child: Column(
             children: [
              ListTile(
+               onTap: (){
+                 Navigator.push(context, MaterialPageRoute(
+                     builder:(_)=> ProductsPage()
+                 ));
+               },
                contentPadding: EdgeInsets.symmetric(horizontal: 40),
                title:Text("SHOE"),
                trailing: Image.asset("login_bg".jpg),
@@ -295,6 +300,11 @@ class TabNew extends StatelessWidget {
                   ),
                   height: 10.h),
               ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder:(_)=> ProductsPage()
+                  ));
+                },
                 contentPadding: EdgeInsets.symmetric(horizontal: 40.w),
                 title:Text("SUIT"),
                 trailing: Image.asset("login_bg".jpg),
@@ -305,6 +315,11 @@ class TabNew extends StatelessWidget {
                   ),
                   height: 10.h),
               ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder:(_)=> ProductsPage()
+                  ));
+                },
                 contentPadding: EdgeInsets.symmetric(horizontal: 40.w),
                 title:Text("T-SHIRTS"),
                 trailing: Image.asset("login_bg".jpg),
