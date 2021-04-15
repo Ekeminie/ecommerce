@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/cutome_alert_dialog.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/agreements_page.dart';
 import 'package:green_tech/features/payment_page.dart';
-
-/// borderRadius: BorderRadius.only(
-//               topLeft: Radius.circular(20), topRight: Radius.circular(20),
-//               bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
 class PaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +31,7 @@ class PaymentScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 20.w,
                       ),
                       Expanded(
                         child: TextField(
@@ -65,7 +60,7 @@ class PaymentScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 20.w,
                       ),
                       Expanded(
                         child: TextField(
@@ -81,11 +76,11 @@ class PaymentScreen extends StatelessWidget {
               ),
             )),
             SizedBox(
-              height: 30,
+              height: 30.h,
             ),
             Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 10.w),
+                padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -98,10 +93,10 @@ class PaymentScreen extends StatelessWidget {
                       Text("469"),
                     ])),
             SizedBox(
-              height: 30,
+              height: 30.h,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 10.w),
               child: FlatButton(
                 minWidth: double.infinity,
                 onPressed: () {
@@ -111,7 +106,7 @@ class PaymentScreen extends StatelessWidget {
                 },
                 child: Text("NEXT",
                     style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15.sp,
                         color: Pallet.white,
                         fontWeight: FontWeight.bold)),
                 color: Pallet.primaryColor,
@@ -131,8 +126,8 @@ class PaymentScreen extends StatelessWidget {
       builder: (BuildContext context) {
         return CustomAlertDialog(
           content: Container(
-              width: mq.height / 1.5,
-              height: mq.height / 3,
+              width: mq.height / 1.5.w,
+              height: mq.height / 3.h,
               decoration: new BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: const Color(0xFFFFFF),
@@ -158,19 +153,19 @@ class PaymentScreen extends StatelessWidget {
                             mainAxisSize:MainAxisSize.min,
                             children: [
                               Icon(Icons.check, color:Pallet.primaryColor),
-                              Text("Success",style:TextStyle(color:Pallet.primaryColor, fontSize:18))
+                              Text("Success",style:TextStyle(color:Pallet.primaryColor, fontSize:18.sp))
                             ],
                           ),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 30,),
-                  Text("Thank you for your Purchase",style:TextStyle(color:Pallet.textLight, fontSize:18)),
-                  SizedBox(height: 20,),
-                  Text("Order Code",style:TextStyle(color:Pallet.textDark, fontSize:18)),
-                  SizedBox(height: 10,),
-                  Text("14BO7D90",style:TextStyle(color:Pallet.textDark, fontSize:18,fontWeight: FontWeight.w500))
+                  SizedBox(height: 30.h,),
+                  Text("Thank you for your Purchase",style:TextStyle(color:Pallet.textLight, fontSize:18.sp)),
+                  SizedBox(height: 20.h,),
+                  Text("Order Code",style:TextStyle(color:Pallet.textDark, fontSize:18.sp)),
+                  SizedBox(height: 10.h,),
+                  Text("14BO7D90",style:TextStyle(color:Pallet.textDark, fontSize:18.sp,fontWeight: FontWeight.w500))
                 ],
               ) //Contents here
               ),

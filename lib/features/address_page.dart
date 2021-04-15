@@ -1,10 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/payment_page.dart';
 
 class AddressPage extends StatefulWidget {
@@ -35,9 +30,9 @@ class _AddressPageState extends State<AddressPage> {
               child: ListView(
                 children: [
 
-                SizedBox(height: 30,),
+                SizedBox(height: 30.h,),
               Container(
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(8.h),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     color: Colors.white),
@@ -51,7 +46,7 @@ class _AddressPageState extends State<AddressPage> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -68,7 +63,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -85,7 +80,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -102,7 +97,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
 
                   Container(
@@ -120,7 +115,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -137,7 +132,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Container(
                     padding: EdgeInsets.all(8),
@@ -156,7 +151,7 @@ class _AddressPageState extends State<AddressPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   FlatButton(
                     onPressed: () {
@@ -165,12 +160,12 @@ class _AddressPageState extends State<AddressPage> {
                     },
                     child: Text("NEXT",
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 15.sp,
                             color: Pallet.white,
                             fontWeight: FontWeight.bold)),
                     color: Pallet.primaryColor,
                     padding:
-                    EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    EdgeInsets.symmetric(horizontal: 10.w, vertical: 15.h),
                   ),
                 ],
               ),

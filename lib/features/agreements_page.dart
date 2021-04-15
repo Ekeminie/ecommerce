@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/constants.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
-import 'dart:math' as math;
-
-import 'package:green_tech/features/your_info_page.dart';
+import 'package:green_tech/core/exports.dart';
 
 class TermsAndConditionsPage extends StatefulWidget {
   @override
@@ -43,29 +34,29 @@ class _TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
                       padding: EdgeInsets.all(20), child: ListView(children: [
                         Wrap(
                           children: [
-                            Text("General Terms",style:TextStyle(color:Pallet.textDark, fontSize:18,fontWeight: FontWeight.w700)),
-                            SizedBox(height: 20,),
-                            Text(dummyText,style:TextStyle(color:Pallet.textDark, fontSize:16)),
+                            Text("General Terms",style:TextStyle(color:Pallet.textDark, fontSize:18.sp,fontWeight: FontWeight.w700)),
+                            SizedBox(height: 20.h,),
+                            Text(dummyText,style:TextStyle(color:Pallet.textDark, fontSize:16.sp)),
                           ],
                         ),
-                    SizedBox(height: 30,),
+                    SizedBox(height: 30.h,),
                     Wrap(children: [
-                      Text("Personal Data",style:TextStyle(color:Pallet.textDark, fontSize:18,fontWeight: FontWeight.w700)),
-                      SizedBox(height: 20,),
-                      Text(dummyText,style:TextStyle(color:Pallet.textDark, fontSize:16)),
+                      Text("Personal Data",style:TextStyle(color:Pallet.textDark, fontSize:18.sp,fontWeight: FontWeight.w700)),
+                      SizedBox(height: 20.h,),
+                      Text(dummyText,style:TextStyle(color:Pallet.textDark, fontSize:16.sp)),
 
                     ],),
 
 
-                    SizedBox(height: 30,),
+                    SizedBox(height: 30.h,),
                     Wrap(children: [
-                      Text("Privacy Agreement",style:TextStyle(color:Pallet.textDark, fontSize:18,fontWeight: FontWeight.w700)),
-                      SizedBox(height: 20,),
+                      Text("Privacy Agreement",style:TextStyle(color:Pallet.textDark, fontSize:18.sp,fontWeight: FontWeight.w700)),
+                      SizedBox(height: 20.h,),
                       Text(dummyText,style:TextStyle(color:Pallet.textDark, fontSize:16)),
 
                     ],),
 
-                    SizedBox(height: 20,),
+                    SizedBox(height: 20.h,),
 
                   ])),
                 ),

@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
-import 'package:green_tech/features/payment_page.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/payment_tab_page.dart';
 
 class PaymentPage extends StatefulWidget {

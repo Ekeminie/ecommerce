@@ -1,10 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/cart_page.dart';
 
 class SingleProductPage extends StatefulWidget {
@@ -47,14 +43,14 @@ class _SingleProductPageState extends State<SingleProductPage> {
                 child: ListView(
                   children: [
                     Container(
-                        height: mq.height / 2.5,
+                        height: mq.height / 2.5.h,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage("login_bg".jpg),
                               fit: BoxFit.cover),
                         )),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,7 +58,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                         Text("Black T-Shirt",
                             style: TextStyle(
                                 color: Pallet.textDark,
-                                fontSize: 18,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.w500)),
                         RatingBarIndicator(
                           rating: 3,
@@ -77,13 +73,13 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 3,
+                      height: 3.h,
                     ),
                     Text("New Seasons T-Shirt",
                         style:
-                            TextStyle(color: Pallet.textLight, fontSize: 14)),
+                            TextStyle(color: Pallet.textLight, fontSize: 14.sp)),
                     SizedBox(
-                      height: 3,
+                      height: 3.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +87,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                         Text("\$45.90",
                             style: TextStyle(
                                 color: Pallet.textDark,
-                                fontSize: 16,
+                                fontSize: 16.sp,
                                 fontWeight: FontWeight.w700)),
                         IconButton(
                           icon: Icon(
@@ -108,15 +104,15 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Text("Color",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey.shade600)),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -130,9 +126,9 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                   setState(() {});
                                 },
                                 child: Container(
-                                  margin: EdgeInsets.only(right: 10),
-                                  width: (constraints.maxWidth - 60) / 7,
-                                  height: 20,
+                                  margin: EdgeInsets.only(right: 10.w),
+                                  width: (constraints.maxWidth - 60) / 7.w,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     borderRadius: new BorderRadius.circular(3),
                                     color: e.color,
@@ -145,15 +141,15 @@ class _SingleProductPageState extends State<SingleProductPage> {
                           .toList(),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Text("Size",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey.shade600)),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -169,7 +165,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                   child: Container(
                                     padding: EdgeInsets.all(5),
                                     alignment: Alignment.center,
-                                    margin: EdgeInsets.only(right: 10),
+                                    margin: EdgeInsets.only(right: 10.w),
                                     width: (constraints.maxWidth - 40) / 6,
                                     decoration: BoxDecoration(
                                       borderRadius:
@@ -180,7 +176,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                     ),
                                     child: Text(e.size,
                                         style: TextStyle(
-                                            fontSize: 20,
+                                            fontSize: 20.sp,
                                             color: e.onTapped
                                                 ? Pallet.white
                                                 : Pallet.textDark)),
@@ -188,7 +184,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                 ))
                             .toList()),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Row(
                       children: [
@@ -197,25 +193,25 @@ class _SingleProductPageState extends State<SingleProductPage> {
                             onPressed: () {},
                             child: Text("BUY NOW",
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                     color: Pallet.white,
                                     fontWeight: FontWeight.bold)),
                             color: Pallet.primaryColor,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 15),
+                                horizontal: 10.w, vertical: 15.h),
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 10.h,
                         ),
                         Expanded(
                             child: Center(
                                 child: Text("ADD TO \nWISHLIST",
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 15.sp,
                                         fontWeight: FontWeight.bold)))),
                         SizedBox(
-                          width: 10,
+                          width: 10.w,
                         ),
                         Expanded(
                           child: FlatButton(
@@ -227,26 +223,26 @@ class _SingleProductPageState extends State<SingleProductPage> {
                             },
                             child: Text("ADD TO CART",
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                     color: Pallet.white,
                                     fontWeight: FontWeight.bold)),
                             color: Pallet.primaryColor,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 15),
+                                horizontal: 10.w, vertical: 15.h),
                           ),
                         )
                       ],
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Text("Details",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey.shade600)),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Container(
                       child: Column(
@@ -254,7 +250,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: detailsItem
                             .map((e) => Padding(
-                                  padding: EdgeInsets.only(bottom: 5.0),
+                                  padding: EdgeInsets.only(bottom: 5.0.h),
                                   child: Text("- ${e.details}",
                                       style: TextStyle(
                                           fontSize: AdaptiveTextSize()
@@ -266,15 +262,15 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Text("Customer Reiviews",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey.shade600)),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Text("Keita Frei",
                         style: TextStyle(
@@ -283,7 +279,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                             fontWeight: FontWeight.w500,
                             color: Pallet.textDark)),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -307,7 +303,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Text(
                         "Many Desktop publishing packages and web page editors now use Lorem Ipsum as their default model tedt and a search for lorem ipsum will uncover many.",
@@ -317,7 +313,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                             fontWeight: FontWeight.w500,
                             color: Pallet.textDark)),
                     SizedBox(
-                      height: 20,
+                      height: 20.h,
                     ),
                     Text("Keita Frei",
                         style: TextStyle(
@@ -326,7 +322,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                             fontWeight: FontWeight.w500,
                             color: Pallet.textDark)),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -350,7 +346,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Text(
                         "Many Desktop publishing packages and web page editors now use Lorem Ipsum as their default model tedt and a search for lorem ipsum will uncover many.",

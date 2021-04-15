@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/address_page.dart';
 
 class YourInfoPage extends StatefulWidget {
@@ -33,7 +28,7 @@ class _YourInfoPageState extends State<YourInfoPage> {
                 builder: (BuildContext context, BoxConstraints constraints) {
               return Container(
                   padding: EdgeInsets.all(10), child: ListView(children: [
-                    SizedBox(height: 30,),
+                    SizedBox(height: 30.h,),
                 Container(
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
@@ -48,7 +43,7 @@ class _YourInfoPageState extends State<YourInfoPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 Container(
                   padding: EdgeInsets.all(8),
@@ -64,7 +59,7 @@ class _YourInfoPageState extends State<YourInfoPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 Container(
                   padding: EdgeInsets.all(8),
@@ -80,7 +75,7 @@ class _YourInfoPageState extends State<YourInfoPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 Container(
                   padding: EdgeInsets.all(8),
@@ -96,10 +91,10 @@ class _YourInfoPageState extends State<YourInfoPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 30.h,
                 ),
                 FlatButton(
                   onPressed: () {
@@ -108,12 +103,12 @@ class _YourInfoPageState extends State<YourInfoPage> {
                   },
                   child: Text("NEXT",
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 15.sp,
                           color: Pallet.white,
                           fontWeight: FontWeight.bold)),
                   color: Pallet.primaryColor,
                   padding:
-                  EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  EdgeInsets.symmetric(horizontal: 10.w, vertical: 15.h),
                 ),
               ]));
             })));

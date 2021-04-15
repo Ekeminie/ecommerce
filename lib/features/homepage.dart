@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:flutter/material.dart';
-import 'package:green_tech/core/utils.dart';
 import 'package:green_tech/features/alternate_products_page.dart';
 import 'package:green_tech/features/products.dart';
 
@@ -40,10 +39,10 @@ class _HomePageState extends State<HomePage>
                       UserAccountsDrawerHeader(
                           accountName: Text("Earvin Dain",
                               style: TextStyle(
-                                  fontSize: 12, color: Colors.white)),
+                                  fontSize: 12.sp, color: Colors.white)),
                           accountEmail: Text("greentech@gmail.com",
                               style: TextStyle(
-                                  fontSize: 12, color: Colors.white)),
+                                  fontSize: 12.sp, color: Colors.white)),
                           currentAccountPicture: CircleAvatar(
                             radius: 50.0,
                             backgroundImage: AssetImage("login_bg".jpg),
@@ -66,33 +65,33 @@ class _HomePageState extends State<HomePage>
                           },
                           title: Text('Account',
                               style: TextStyle(
-                                  fontSize: 18, color: Colors.grey)),
+                                  fontSize: 18.sp, color: Colors.grey)),
                         );
                       },
                       body: Container(
                         width: double.infinity,
-                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 10.w),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Orders',
                                 style: TextStyle(
-                                    fontSize: 16, color: Colors.grey[500])),
+                                    fontSize: 16.sp, color: Colors.grey[500])),
                             SizedBox(
-                              height: 10,
+                              height: 10.h,
                             ),
                             Text('WishList',
                                 style: TextStyle(
-                                    fontSize: 16, color: Colors.grey[500])),
+                                    fontSize: 16.sp, color: Colors.grey[500])),
                             SizedBox(
-                              height: 10,
+                              height: 10.h,
                             ),
                             Text('Recommendation',
                                 style: TextStyle(
-                                    fontSize: 16, color: Colors.grey[500])),
+                                    fontSize: 16.sp, color: Colors.grey[500])),
                             SizedBox(
-                              height: 10,
+                              height: 10.h,
                             ),
                           ],
                         ),
@@ -104,7 +103,7 @@ class _HomePageState extends State<HomePage>
                         return ListTile(
                           title: Text('New Arrivals',
                               style: TextStyle(
-                                  fontSize: 16, color: Colors.grey)),
+                                  fontSize: 16.sp, color: Colors.grey)),
                         );
                       },
                       body: ListTile(
@@ -118,7 +117,7 @@ class _HomePageState extends State<HomePage>
                         return ListTile(
                           title: Text('Sales',
                               style: TextStyle(
-                                  fontSize: 16, color: Colors.grey)),
+                                  fontSize: 16.sp, color: Colors.grey)),
                         );
                       },
                       body: ListTile(
@@ -132,7 +131,7 @@ class _HomePageState extends State<HomePage>
                         return ListTile(
                           title: Text('Men',
                               style: TextStyle(
-                                  fontSize: 16, color: Colors.grey)),
+                                  fontSize: 16.sp, color: Colors.grey)),
                         );
                       },
                       body: ListTile(
@@ -146,7 +145,7 @@ class _HomePageState extends State<HomePage>
                         return ListTile(
                           title: Text('Women',
                               style: TextStyle(
-                                  fontSize: 16, color: Colors.grey)),
+                                  fontSize: 16.sp, color: Colors.grey)),
                         );
                       },
                       body: ListTile(
@@ -160,7 +159,7 @@ class _HomePageState extends State<HomePage>
                         return ListTile(
                           title: Text('Kids',
                               style: TextStyle(
-                                  fontSize: 16, color: Colors.grey)),
+                                  fontSize: 16.sp, color: Colors.grey)),
                         );
                       },
                       body: ListTile(
@@ -202,7 +201,7 @@ class _HomePageState extends State<HomePage>
                   children: [
                     Container(
                         width: double.infinity,
-                        height: mq.height / 3,
+                        height: mq.height / 3.h,
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage("login_bg".jpg),
@@ -218,13 +217,13 @@ class _HomePageState extends State<HomePage>
                             child: Text("2015 New Fashion Women",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 24,
+                                    fontSize: 24.sp,
                                     fontWeight: FontWeight.w700))),
                       ),
                     )
                   ],
                 ),
-                preferredSize: Size.fromHeight(mq.height / 3),
+                preferredSize: Size.fromHeight(mq.height / 3.h),
               )),
           body: DefaultTabController(
             length: 3,
@@ -279,14 +278,14 @@ class TabNew extends StatelessWidget {
                   child: Center(
                     child: Divider(),
                   ),
-                  height: 10),
+                  height: 10.h),
               ListTile(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(
                       builder:(_)=> ProductsPage()
                   ));
                 },
-                contentPadding: EdgeInsets.symmetric(horizontal: 40),
+                contentPadding: EdgeInsets.symmetric(horizontal: 40.w),
                 title:Text("JEANS"),
                 trailing: Image.asset("login_bg".jpg),
               ),
@@ -294,9 +293,9 @@ class TabNew extends StatelessWidget {
                   child: Center(
                     child: Divider(),
                   ),
-                  height: 10),
+                  height: 10.h),
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 40),
+                contentPadding: EdgeInsets.symmetric(horizontal: 40.w),
                 title:Text("SUIT"),
                 trailing: Image.asset("login_bg".jpg),
               ),
@@ -304,9 +303,9 @@ class TabNew extends StatelessWidget {
                   child: Center(
                     child: Divider(),
                   ),
-                  height: 10),
+                  height: 10.h),
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 40),
+                contentPadding: EdgeInsets.symmetric(horizontal: 40.w),
                 title:Text("T-SHIRTS"),
                 trailing: Image.asset("login_bg".jpg),
               ),
@@ -314,7 +313,7 @@ class TabNew extends StatelessWidget {
                   child: Center(
                     child: Divider(),
                   ),
-                  height: 10),
+                  height: 10.h),
             ],
           ),
         ),

@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
+import 'package:green_tech/core/exports.dart';
 import 'dart:math' as math;
 
 import 'package:green_tech/features/your_info_page.dart';
@@ -38,24 +33,24 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       singleCartItem(mq),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       singleCartItem(mq),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       singleCartItem(mq),
                       SizedBox(
-                        height: 30,
+                        height: 30.h,
                       ),
                       Row(
                         children: [
                           Text("Subtotal - ",
                               style: TextStyle(
-                                  fontSize: 22, color: Pallet.textDark)),
+                                  fontSize: 22.sp, color: Pallet.textDark)),
                           Text("3 Items ",
                               style: TextStyle(
-                                  fontSize: 14, color: Pallet.textDark)),
+                                  fontSize: 14.sp, color: Pallet.textDark)),
                           Expanded(
                             child: Container(
                               width: double.infinity,
@@ -63,11 +58,11 @@ class _CartPageState extends State<CartPage> {
                           ),
                           Text("\$ 100.00 ",
                               style: TextStyle(
-                                  fontSize: 18, color: Pallet.textDark)),
+                                  fontSize: 18.sp, color: Pallet.textDark)),
                         ],
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 30.h,
                       ),
                       FlatButton(
                         onPressed: () {
@@ -76,12 +71,12 @@ class _CartPageState extends State<CartPage> {
                         },
                         child: Text("PROCEED TO CHECKOUT",
                             style: TextStyle(
-                                fontSize: 15,
+                                fontSize: 15.sp,
                                 color: Pallet.white,
                                 fontWeight: FontWeight.bold)),
                         color: Pallet.primaryColor,
                         padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                            EdgeInsets.symmetric(horizontal: 10.w, vertical: 15.h),
                       ),
                     ],
                   ));
@@ -93,7 +88,7 @@ class _CartPageState extends State<CartPage> {
       elevation: 5,
       color: Colors.white,
       child: Container(
-        height: mq.height / 4.5,
+        height: mq.height / 4.5.h,
         width: double.infinity,
         child: Row(
           children: [
@@ -115,15 +110,15 @@ class _CartPageState extends State<CartPage> {
                   Text("Black T-Shirt",
                       style: TextStyle(
                           color: Pallet.textDark,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.w500)),
                   SizedBox(
-                    height: 5,
+                    height: 5.h,
                   ),
                   Text("New Seasons T-Shirt",
-                      style: TextStyle(color: Pallet.textLight, fontSize: 14)),
+                      style: TextStyle(color: Pallet.textLight, fontSize: 14.sp)),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -143,7 +138,7 @@ class _CartPageState extends State<CartPage> {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text("\$45.00",
                       style:

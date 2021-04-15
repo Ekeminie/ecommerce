@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/pallet.dart';
-import "package:green_tech/core/utils.dart";
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
+import 'package:green_tech/core/exports.dart';
 import 'package:green_tech/features/single_product_page.dart';
 
 
@@ -39,7 +34,7 @@ class _SecondaryProductPageState extends State<SecondaryProductPage> {
                           crossAxisSpacing: 20,
                           childAspectRatio: 0.9,
                           mainAxisSpacing: 20,
-                          maxCrossAxisExtent: mq.height / 3),
+                          maxCrossAxisExtent: mq.height / 3.h),
                       itemCount: getProductsList.length,
                       itemBuilder: (context, index) {
                         return InkWell(
@@ -56,8 +51,8 @@ class _SecondaryProductPageState extends State<SecondaryProductPage> {
                             elevation: 5,
                             color: Pallet.white,
                             child: Container(
-                                height: mq.height / 8,
-                                width: mq.width / 2.5,
+                                height: mq.height / 8.h,
+                                width: mq.width / 2.5.w,
 
                                 child: Stack(
                                   children: [
@@ -66,7 +61,7 @@ class _SecondaryProductPageState extends State<SecondaryProductPage> {
                                       bottom: 0.0,
                                       right: 0.0,
                                       child: Container(
-                                          height: 30,
+                                          height: 30.h,
                                           padding: EdgeInsets.all(5),
                                           decoration: BoxDecoration(color: Colors.black45),
                                           child: Row(
@@ -76,7 +71,7 @@ class _SecondaryProductPageState extends State<SecondaryProductPage> {
                                                 child: Text(getProductsList[index].title,
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 12,
+                                                        fontSize: 12.sp,
                                                         fontWeight: FontWeight.w700)),
                                               ),
                                               IconButton(padding: EdgeInsets.zero,

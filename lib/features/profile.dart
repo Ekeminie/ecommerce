@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:green_tech/core/constants.dart';
-import 'package:green_tech/core/pallet.dart';
-import 'package:green_tech/core/widgets/custom_appbar.dart';
-import 'package:green_tech/core/widgets/custom_drawer.dart';
-import 'package:green_tech/core/utils.dart';
-import 'package:green_tech/core/widgets/responsive_text.dart';
-import 'dart:math' as math;
-
-import 'package:green_tech/features/your_info_page.dart';
-
-import 'homepage.dart';
+import 'package:green_tech/core/exports.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -76,7 +65,7 @@ class _ProfilePageState extends State<ProfilePage>  with SingleTickerProviderSta
                   child: Container(
                     padding:EdgeInsets.all(10),
                     width: double.infinity,
-                      height: mq.height / 6,
+                      height: mq.height / 6.h,
                       decoration: BoxDecoration(
                         color:Pallet.primaryColor
                           // image: DecorationImage(
@@ -171,8 +160,8 @@ class ProfileScreen extends StatelessWidget {
         elevation:3,
         color:Colors.white,
         child: ListTile(
-            title:Text(title??"Test",style:TextStyle(color:Pallet.textLight, fontSize:14, fontWeight: FontWeight.w500)),
-            subtitle: (subtitle!=null)?subtitle:Text(subTitle??"Another Test",style:TextStyle(color:Pallet.textDark, fontSize:18, fontWeight: FontWeight.w700)),
+            title:Text(title??"Test",style:TextStyle(color:Pallet.textLight, fontSize:14.sp, fontWeight: FontWeight.w500)),
+            subtitle: (subtitle!=null)?subtitle:Text(subTitle??"Another Test",style:TextStyle(color:Pallet.textDark, fontSize:18.sp, fontWeight: FontWeight.w700)),
             trailing: hasTrailingIcon? Icon(Icons.edit):SizedBox.shrink()
         ),
       ),
